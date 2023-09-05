@@ -1,23 +1,35 @@
 <?php
-include "../../controller/commentaireC.php";
-$commentaireC = new commentaireC();
-$listecommentaire = $commentaireC->affichercommentaires();
+include "../../controller/coursC.php";
+$coursC=new coursC();
+$title ='';
+if(isset($_POST['title'])){
+   
+	$title = $_POST['title'];
+	$listecours=$coursC->AffichercoursFiltre($title);
+	
+}
+else
+$listecours=$coursC->affichercourss();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
+
+                    
+
 <head>
     <meta charset="utf-8">
-    <title>Anim shop Animalerie </title>
+    <title>Esprit </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Anim shop" name="keywords">
-    <meta content="Anim shop" name="description">
+    <meta content="Esprit" name="keywords">
+    <meta content="Esprit" name="description">
 
     <!-- Favicon -->
     <link href="../img/favicon.ico" rel="icon">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+     <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- CSS Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -37,8 +49,8 @@ $listecommentaire = $commentaireC->affichercommentaires();
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="logo">
-                            <a href="index.html">
-                                <h1>Anim shop</h1>
+                            <a href="../index.html">
+                                <h1>Esprit</h1>
                                 <!-- <img src="../img/logo.jpg" alt="Logo"> -->
                             </a>
                         </div>
@@ -50,14 +62,14 @@ $listecommentaire = $commentaireC->affichercommentaires();
                                 <p>de lundi a vendredi </p>
                             </div>
                             <div class="text">
-                                <h2>+216 456 7890</h2>
+                                <h2>+216 70 250 000</h2>
                                 <p>Appelez-nous pour plus d'infos</p>
                             </div>
                             <div class="social">
                                 <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
                                 <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -77,12 +89,17 @@ $listecommentaire = $commentaireC->affichercommentaires();
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
-                            <div class="navbar-nav mr-auto">
-                        <a href="../eventetoffre/afficherEvents.php" class="nav-item nav-link">Events</a>
-                        <a href="../eventetoffre/afficherOffre.php" class="nav-item nav-link">Offre</a>
-<a href="article.php" class="nav-item nav-link">Blog</a>
+                        
+                        <a href="../cours/afficherQuiz.php" class="nav-item nav-link">Quiz</a>
+                        <a href="cours.php" class="nav-item nav-link">Cours</a>
+                        <a href="../register.php" class="nav-item nav-link">Inscription</a>
+                        <a href="../connexion.php" class="nav-item nav-link">Connexion</a>
 
 
+
+
+                    </div>
+                        
 
                     </div>
                 </nav>
@@ -96,25 +113,27 @@ $listecommentaire = $commentaireC->affichercommentaires();
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Notre Blog</h2>
+                        <h2>Notre Cours</h2>
                     </div>
                     <div class="col-12">
-                        <a href="">Accueil</a>
-                        <a href="">Notre Blog</a>
+                        <a href="../index.html">Accueil</a>
+                        <a href="">Notre Cours</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Page Header End -->
+
+
+
 
 
         <!-- Blog Start -->
         <div class="blog">
             <div class="container">
                 <div class="section-header">
-                    <h2>liste des commentaires</h2>
+                    <h2>Nos Cours</h2>
                 </div>
-
+       
 
 
             </div>
@@ -123,115 +142,46 @@ $listecommentaire = $commentaireC->affichercommentaires();
 
 
 
+   <!-- Blog Start -->
+<div class="blog">
+    <div class="container">
+       
 
+        <div class="row blog-page">
 
+            <?PHP
+            $coursC = new coursC();
+            $listecours = $coursC->affichercourss();
+            foreach($listecours as $user){
 
+                ?>
+                <div class="col-lg-4 col-md-6 blog-item">
+                    <img src="../img/cour.jfif" alt="Blog">
 
-
-        <!--            xttttttt          -->
-
-
-
-
-
-
-
-
-
-
-        <div class="col-xl-6 col-md-12">
-            <div class="ms-panel ms-panel-fh" style="width:900px ; margin-left: 120px;">
-                <div class="ms-panel-body">
-
-
-                   
-
-
-
-
-                    <div class="form-row">
-                        <div class="col-xxl-7 col-md-12 ">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <?PHP
-                            foreach ($listecommentaire as $row) {
-                            ?>
-                                <h1><?PHP echo "article n°";
-                                    echo $row['id_article']; ?></h1>
-                                    <div class="col-lg-4 col-md-6 blog-item">
-                                            <img src="../img/aa-1.jpg" alt="Blog">
-                    
-                                     </div>
-                                <h5><?PHP echo $row['nom'];
-                                    echo "  ";
-                                    echo $row['prenom']; ?></h5>
-
-                                <p><?PHP echo $row['commentaire']; ?></p>
-
-
-
-                                <br>
-
-                                <form method="POST" action="supprimercommentaire.php">
-
-                                    <button type="submit" style="min-width: 10px" class="btn btn-dark "> <i class="fa fa-trash"> </i></button>
-                                    <input type="hidden" value="<?PHP echo $row['id_commentaire']; ?>" name="id_commentaire">
-</form>
-                                    <a href="modifiercommentaire.php?id_commentaire=<?PHP echo $row['id_commentaire']; ?>">
-                                        <button type="submit" style="min-width: 10px" class="btn btn-dark" name="modifier"><i class="far fa-check-circle"> </i></button>
-
-                                    </a>
-                                
-                                <br> </br>
-
-
-
-
-
-                            <?PHP
-                            }
-                            ?>
-
-
-
-
-
-
-
-
-
-                        </div>
-
+                    <div class="meta">
+                        <i class="fa fa-list-alt"></i>
+                        <a href="">Titre : <?PHP echo $user['title']; ?></a><br>
+                        <i class="fa fa-calendar-alt"></i>
+                        <a href="">Description : <?PHP echo $user['description']; ?></a><br>
+                        <br>
                     </div>
+
+
                 </div>
-
-            </div>
+                <?PHP
+            }
+            ?>
         </div>
+
     </div>
-    </div>
-    </div>
-
-
-    <!--            xttttttt          -->
+</div>
+    <!-- Blog End -->
 
 
 
 
 
-
-
+    <!-- Page Header End -->
 
 
 
@@ -265,9 +215,7 @@ $listecommentaire = $commentaireC->affichercommentaires();
                 <div class="col-md-6 col-lg-4">
                     <div class="footer-about">
                         <h2>A propos</h2>
-                        <p>
-                            Nous voulons faciliter l achat des produits necessaires pour vos animaux avec une livraison rapide et assurer.
-                        </p>
+                     
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-8">
@@ -278,22 +226,13 @@ $listecommentaire = $commentaireC->affichercommentaires();
 
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="footer-link">
-                                <h2>Pages utiles</h2>
-                                <a href="">Commandes</a>
-                                <a href="">Produits</a>
-                                <a href="">Livraison</a>
-                                <a href="">Utilisateurs</a>
-                                <a href="">Offres</a>
-                            </div>
-                        </div>
+                      
                         <div class="col-md-6 col-lg-4">
                             <div class="footer-contact">
                                 <h2>contactez nous</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>123 residence,ennaser2,ariena</p>
-                                <p><i class="fa fa-phone-alt"></i>+216 345 67890</p>
-                                <p><i class="fa fa-envelope"></i>info_animshop@hotmail.com</p>
+                                <p><i class="fa fa-map-marker-alt"></i>Adresse. 1, 2 rue André Ampère - 2083 - Pôle Technologique - El Ghazala.</p>
+                                <p><i class="fa fa-phone-alt"></i>+216 70 250 000</p>
+                                <p><i class="fa fa-envelope"></i>contact@esprit.tn</p>
                                 <div class="footer-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -330,10 +269,19 @@ $listecommentaire = $commentaireC->affichercommentaires();
 
 
 
+
+    <!--            xttttttt          -->
+
     <!-- Footer End -->
 
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     </div>
+
+
+
+
+
+
 
 
     <!-- JavaScript Libraries -->

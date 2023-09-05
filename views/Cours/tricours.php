@@ -21,7 +21,7 @@ $listecours=$coursC->affichercourss();
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Anim shop   Animalerie</title>
+  <title>Esprit</title>
   <!-- Iconic Fonts -->
   <link href="../vendors/iconic-fonts/font-awesome/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -69,7 +69,7 @@ $listecours=$coursC->affichercourss();
 
     <!-- Logo -->
     <div class="logo-sn ms-d-block-lg">
-      <a class="pl-0 ml-0 text-center" href="../index.html"> <img src="../assets/img/dashboard/logoo.png" alt="logo"> </a>
+      <a class="pl-0 ml-0 text-center" href="../../front/index.html"> <img src="../assets/img/dashboard/logooo.jpg" alt="logo"> </a>
     </div>
 
     <!-- Navigation -->
@@ -80,7 +80,7 @@ $listecours=$coursC->affichercourss();
           <span><i class="material-icons fs-16">dashboard</i>Dashboard </span>
         </a>
         <ul id="dashboard" class="collapse" aria-labelledby="dashboard" data-parent="#side-nav-accordion">
-          <li> <a href="../index.html">anim shop</a> </li>
+          <li> <a href="../../front/index.html">Esprit</a> </li>
 
 
         </ul>
@@ -91,7 +91,7 @@ $listecours=$coursC->affichercourss();
       <!-- gestion des Cours -->
       <li class="menu-item">
         <a href="#" class="has-chevron" data-toggle="collapse" data-target="#cours-page" aria-expanded="false" aria-controls="cours-page">
-          <span><i class='fas fa-truck' style='font-size:18px;color:white'></i>Gestion Des Cours</span>
+          <span><i class='fas fa-book-open' style='font-size:24px'></i>Gestion Des Cours</span>
         </a>
         <ul id="Cours-page" class="collapse" aria-labelledby="Cours-page" data-parent="#side-nav-accordion">
           <li> <a href="cours.html">Ajouter Une Cours</a>
@@ -104,7 +104,7 @@ $listecours=$coursC->affichercourss();
       <!-- gestion des livreurs -->
       <li class="menu-item">
         <a href="#" class="has-chevron" data-toggle="collapse" data-target="#Livreur-page" aria-expanded="false" aria-controls="Livreur-page">
-          <span><i class='fas fa-user-tie' style='font-size:18px;color:white'></i>Gestion Des Quiz</span>
+          <span><i class="fa fa-question" style='font-size:24px'></i>Gestion Des Quiz</span>
         </a>
         <ul id="Livreur-page" class="collapse" aria-labelledby="Livreur-page" data-parent="#side-nav-accordion">
           <li> <a href="../Quiz/quiz.html">Ajouter Un Quiz</a> </li>

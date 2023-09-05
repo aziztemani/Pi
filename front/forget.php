@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,20 +44,17 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">Gp<span>.</span></a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="index.html"><span>E</span>T<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="index.html">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#Create">Inscription</a></li>
-          <li><a class="nav-link scrollto" href="#about">Ouvrages</a></li>
-          <li><a class="nav-link scrollto" href="#services">Cours</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Actualités</a></li>
-          <li><a class="nav-link scrollto" href="#team">Evènements</a></li>
-          <li><a class="nav-link scrollto" href="Livres.php">Livres</a></li>
-          <li><a class="nav-link scrollto" active href="#Connexion">Connexion</a></li>
+        <li><a class="nav-link scrollto " active href="index.html">Accueil</a></li>
+                    <li><a class="nav-link scrollto" href="register.php">Inscription</a></li>
+                    <li><a class="nav-link scrollto" href="profil.php">Connexion</a></li>
+                    <li><a class="nav-link scrollto" href="cours/cours.php">Cours</a></li>
+                    <li><a class="nav-link scrollto" href="cours/afficherQuiz.php">Quiz</a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -69,51 +65,52 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
-    <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
 
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="col-xl-6 col-lg-8">
-          <h1><span>Anim</span>Shop<span>.</span></h1>
-         
-        </div>
-      </div>
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+                <div class="col-xl-6 col-lg-8">
+                    <h1><span>Esp</span>rit<span>.</span></h1>
+                    <h2>Se former autrement</h2>
+                </div>
+            </div>
 
-      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-library"></i>
-            <h3><a href="">Ouvrages</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-brain"></i>
-            <h3><a href="">Cours</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-message-rounded-detail"></i>
-            <h3><a href="">Actualités</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line"></i>
-            <h3><a href="">Evènements</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-book"></i>
-            <h3><a href="">Livres</a></h3>
-          </div>
-        </div>
-        
-      </div>
+            <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-library"></i>
+                        <h3><a href="eventetoffre/afficherOffre.php">Quiz</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-brain"></i>
+                        <h3><a href="cours/cours.php">Cours</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-message-rounded-detail"></i>
+                        <h3><a href="">Actualités</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="ri-calendar-todo-line"></i>
+                        <h3><a href="">Evènements</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-book"></i>
+                        <h3><a href="">Livres</a></h3>
+                    </div>
+                </div>
 
-    </div>
-  </section><!-- End Hero -->
+            </div>
+
+        </div>
+    </section>
+    <!-- End Hero -->
 
 
   
@@ -135,7 +132,7 @@
             </div>
             <br>
                        
-            <div class="btn-login"><button type="submit" name="reset_request_submit">chercher</button></div><br>
+            <div class="btn-login"><button type="submit" name="reset_request_submit">Envoyer</button></div><br>
           </form>
          
         </div>
@@ -181,7 +178,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> <strong> Téléphone:</strong> +216 50 031 324<br></a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"><strong> Adresse:</strong> El Ghazela<br></a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"><strong> Email:</strong> AnimShop@esprit.tn <br></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"><strong> Email:</strong> Contact@esprit.tn <br></a></li>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

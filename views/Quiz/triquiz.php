@@ -13,7 +13,7 @@ $listequiz=$quizC->afficherquizs();
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Anim shop   Animalerie</title>
+  <title>Esprit</title>
   <!-- Iconic Fonts -->
   <link href="../vendors/iconic-fonts/font-awesome/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -61,7 +61,7 @@ $listequiz=$quizC->afficherquizs();
 
     <!-- Logo -->
     <div class="logo-sn ms-d-block-lg">
-      <a class="pl-0 ml-0 text-center" href="../index.html"> <img src="../assets/img/dashboard/logoo.png" alt="logo"> </a>
+      <a class="pl-0 ml-0 text-center" href="../../front/index.html"> <img src="../assets/img/dashboard/logooo.jpg" alt="logo"> </a>
     </div>
 
     <!-- Navigation -->
@@ -72,7 +72,7 @@ $listequiz=$quizC->afficherquizs();
           <span><i class="material-icons fs-16">dashboard</i>Dashboard </span>
         </a>
         <ul id="dashboard" class="collapse" aria-labelledby="dashboard" data-parent="#side-nav-accordion">
-          <li> <a href="../index.html">anim shop</a> </li>
+          <li> <a href="../../front/index.html">Esprit</a> </li>
 
 
         </ul>
@@ -82,7 +82,7 @@ $listequiz=$quizC->afficherquizs();
 
       <li class="menu-item">
         <a href="#" class="has-chevron" data-toggle="collapse" data-target="#livreur-page" aria-expanded="false" aria-controls="livreur-page">
-          <span><i class='fas fa-truck' style='font-size:18px;color:white'></i>Gestion Des Cours</span>
+          <span><i class='fas fa-book-open' style='font-size:24px'></i>Gestion Des Cours</span>
         </a>
         <ul id="livreur-page" class="collapse" aria-labelledby="livreur-page" data-parent="#side-nav-accordion">
           <li> <a href="../Cours/cours.html">Ajouter Un Cours</a> 
@@ -96,7 +96,7 @@ $listequiz=$quizC->afficherquizs();
       <!-- gestion des livreurs -->
       <li class="menu-item">
         <a href="#" class="has-chevron" data-toggle="collapse" data-target="#Livreur-page" aria-expanded="false" aria-controls="Livreur-page">
-          <span><i class='fas fa-user-tie' style='font-size:18px;color:white'></i>Gestion Des Quiz</span>
+          <span><i class="fa fa-question" style='font-size:24px'></i>Gestion Des Quiz</span>
         </a>
         <ul id="Livreur-page" class="collapse" aria-labelledby="Livreur-page" data-parent="#side-nav-accordion">
           <li> <a href="quiz.html">Ajouter Un Quiz</a> </li>
@@ -143,7 +143,7 @@ $listequiz=$quizC->afficherquizs();
           </li>
           <li class="dropdown-divider"></li>
           <li class="ms-dropdown-list">
-            <a class="media fs-14 p-2" href="../prebuilt-pages/user-profile.html"> <span><i class="flaticon-user mr-2"></i> Profile</span> </a>
+            <a class="media fs-14 p-2" href="../../front/profil.php"> <span><i class="flaticon-user mr-2"></i> Profile</span> </a>
             <a class="media fs-14 p-2" href="../apps/email.html"> <span><i class="flaticon-mail mr-2"></i> Inbox</span> <span class="badge badge-pill badge-info">3</span> </a>
             <a class="media fs-14 p-2" href="../prebuilt-pages/user-profile.html"> <span><i class="flaticon-gear mr-2"></i> Account Settings</span> </a>
           </li>
@@ -152,7 +152,7 @@ $listequiz=$quizC->afficherquizs();
             <a class="media fs-14 p-2" href="../prebuilt-pages/lock-screen.html"> <span><i class="flaticon-security mr-2"></i> Lock</span> </a>
           </li>
           <li class="dropdown-menu-footer">
-            <a class="media fs-14 p-2" href="../prebuilt-pages/default-login.html"> <span><i class="flaticon-shut-down mr-2"></i> Logout</span> </a>
+            <a class="media fs-14 p-2" href="../../front/connexion.php"> <span><i class="flaticon-shut-down mr-2"></i> Logout</span> </a>
           </li>
         </ul>
       </li>

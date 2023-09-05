@@ -73,14 +73,11 @@ if (isset($_POST["id"]) &&
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="index.html">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#Create">Inscription</a></li>
-          <li><a class="nav-link scrollto" href="#about">Blog</a></li>
-          <li><a class="nav-link scrollto" href="#services">Cours</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Actualités</a></li>
-          <li><a class="nav-link scrollto" href="#team">Evènements</a></li>
-          <li><a class="nav-link scrollto" href="#team">Livraison</a></li>
-          <li><a class="nav-link scrollto" active href="#Connexion">Connexion</a></li>
+        <li><a class="nav-link scrollto " active href="index.html">Accueil</a></li>
+                    <li><a class="nav-link scrollto" href="register.php">Inscription</a></li>
+                    <li><a class="nav-link scrollto" href="profil.php">Connexion</a></li>
+                    <li><a class="nav-link scrollto" href="cours/cours.php">Cours</a></li>
+                    <li><a class="nav-link scrollto" href="cours/afficherQuiz.php">Quiz</a></li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -91,51 +88,53 @@ if (isset($_POST["id"]) &&
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
-    <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
 
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="col-xl-6 col-lg-8">
-          <h1><span>Anim</span>Shop<span>.</span></h1>
-          
-        </div>
-      </div>
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+                <div class="col-xl-6 col-lg-8">
+                    <h1><span>Esp</span>rit<span>.</span></h1>
+                    <h2>Se former autrement</h2>
+                </div>
+            </div>
 
-      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-library"></i>
-            <h3><a href="">Ouvrages</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-brain"></i>
-            <h3><a href="">Produit</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-message-rounded-detail"></i>
-            <h3><a href="">Blog</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line"></i>
-            <h3><a href="">Evènements</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-book"></i>
-            <h3><a href="">Livraison</a></h3>
-          </div>
-        </div>
-        
-      </div>
+            <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-library"></i>
+                        <h3><a href="cours/afficherQuiz.php">Quiz</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-brain"></i>
+                        <h3><a href="cours/cours.php">Cours</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-message-rounded-detail"></i>
+                        <h3><a href="">Actualités</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="ri-calendar-todo-line"></i>
+                        <h3><a href="">Evènements</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-book"></i>
+                        <h3><a href="">Livres</a></h3>
+                    </div>
+                </div>
 
-    </div>
-  </section><!-- End Hero -->
+            </div>
+
+        </div>
+    </section>
+    <!-- End Hero -->
+
 
 
   
@@ -210,7 +209,7 @@ if (isset($_POST["id"]) &&
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#"> <strong> Téléphone:</strong> +216 55 622 768<br></a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#"><strong> Adresse:</strong> El Ghazela<br></a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"><strong> Email:</strong> AnimShop@esprit.tn <br></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"><strong> Email:</strong> Contact@esprit.tn <br></a></li>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

@@ -21,19 +21,17 @@
                         <div class="col-md-6 col-lg-4">
                             <div class="footer-link">
                                 <h2>Pages utiles</h2>
-                                <a href="">Commandes</a>
-                                <a href="">Produits</a>
-                                <a href="">Livraison</a>
+                                <a href="afficherCours.php">Cours</a>
+                                <a href="cours/afficherQuiz.php">Quiz</a>                             
                                 <a href="">Utilisateurs</a>
-                                <a href="">Offres</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
                             <div class="footer-contact">
                                 <h2>contactez nous</h2>
                                 <p><i class="fa fa-map-marker-alt"></i>123 residence,ennaser2,ariena</p>
-                                <p><i class="fa fa-phone-alt"></i>+216 345 67890</p>
-                                <p><i class="fa fa-envelope"></i>info_animshop@hotmail.com</p>
+                                <p><i class="fa fa-phone-alt"></i>+216 70 250 000</p>
+                                <p><i class="fa fa-envelope"></i>contact@esprit.tn</p>
                                 <div class="footer-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>

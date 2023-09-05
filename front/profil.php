@@ -23,7 +23,7 @@ if(empty($_SESSION['e'])){
 
 
    if(isset($_POST['save'])){
-    $user = new user($_POST["id2"],$_POST["prenom"],$_POST["nom"],$_POST["email"],$_POST["tel"],$_POST["naiss"],$_POST["classe"],$_POST["sexe"],$_POST["mdp"]);
+    $user = new user($_POST["id2"],$_POST["prenom"],$_POST["nom"],$_POST["email"],$_POST["tel"],$_POST["naiss"],$_POST["classe"],$_POST["sexe"],$_POST["role"],$_POST["mdp"]);
     $b=$userC->updateUser($user,$_POST["id2"]);  
    header('Location: profil.php');
    }
@@ -135,12 +135,8 @@ header("Location:profil.php");
         <nav id="navbar" class="navbar  order-last order-lg-0">
             <ul>
             <li><a class="nav-link scrollto " href="index.html">Accueil</a></li>
-                    <li><a class="nav-link scrollto" href="#about">Produits</a></li>
-          <li><a class="nav-link scrollto" href="eventetoffre/afficherEvents.php">Evènements</a></li>
-          <li><a class="nav-link scrollto" href="eventetoffre/afficherOffre.php">Offre</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Actualités</a></li>
-          <li><a class="nav-link scrollto" href="article/article.php">Blog</a></li>
-          <li><a class="nav-link scrollto" href="#team">Livraisons</a></li>
+            <li><a class="nav-link scrollto" href="cours/cours.php">Cours</a></li>
+                    <li><a class="nav-link scrollto" href="cours/afficherQuiz.php">Quiz</a></li>
                 <li><a class="nav-link scrollto" href="deconnexion.php">déonnexion</a></li>
 
             </ul>
@@ -152,53 +148,54 @@ header("Location:profil.php");
     </div>
 </header><!-- End Header -->
 
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center justify-content-center">
-    <div class="container" data-aos="fade-up">
+<!    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center justify-content-center">
+        <div class="container" data-aos="fade-up">
 
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="col-xl-6 col-lg-8">
-          <h1><span>Anim</span>Shop<span>.</span></h1>
-          <h2>Se documenter autrement</h2>
-        </div>
-      </div>
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+                <div class="col-xl-6 col-lg-8">
+                    <h1><span>Esp</span>rit<span>.</span></h1>
+                    <h2>Se former autrement</h2>
+                </div>
+            </div>
 
-      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-library"></i>
-            <h3><a href="">Produits</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-brain"></i>
-            <h3><a href="">Blog</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-message-rounded-detail"></i>
-            <h3><a href="">Actualités</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line"></i>
-            <h3><a href="">Evènements</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="bx bx-book"></i>
-            <h3><a href="">Livraison</a></h3>
-          </div>
-        </div>
-        
-      </div>
+            <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-library"></i>
+                        <h3><a href="cours/afficherQuiz.php">Quiz</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-brain"></i>
+                        <h3><a href="cours/cours.php">Cours</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-message-rounded-detail"></i>
+                        <h3><a href="">Actualités</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="ri-calendar-todo-line"></i>
+                        <h3><a href="">Evènements</a></h3>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4">
+                    <div class="icon-box">
+                        <i class="bx bx-book"></i>
+                        <h3><a href="">Livres</a></h3>
+                    </div>
+                </div>
 
-    </div>
-  </section><!-- End Hero -->
+            </div>
+
+        </div>
+    </section>
+    <!-- End Hero -->
 
 <main id="main">
 
@@ -376,6 +373,33 @@ header("Location:profil.php");
                                             ?>
                                         </select>
                                     </div>
+
+                                    <div class="col-xs-6">
+                                        <label for="role"><h4>Role</h4></label>
+                                        <select class="form-control" name="role" id="role"  style="height: 40px;" value="<?php echo $listeU[0]['role'];?>">
+
+                                            <?php 
+                                            if ($listeU[0]['role']=="enseignant"){
+                                                echo"<option selected='selected' value='enseignant'>Enseignant</option>";
+                                            }
+                                            else {
+                                                echo "<option value='enseignant'>Enseignant</option>";
+                                            }
+                                            if ($listeU[0]['role']=="etudiant"){
+                                                echo"<option selected='selected' value='etudiant'>Etudiant</option>";
+                                            }
+                                            else {
+                                                echo "<option value='etudiant'>Etudiant</option>";
+                                            }  
+                                            if ($listeU[0]['role']=="administrateur"){
+                                                echo"<option selected='selected' value='administrateur'>Administrateur</option>";
+                                            }
+                                            else {
+                                                echo "<option value='administrateur'>Administrateur</option>";
+                                            }                                             
+                                            ?>
+                                        </select>
+                                    </div>
                                 </div>
 
 
@@ -487,6 +511,13 @@ header("Location:profil.php");
                                         <input type="text" class="form-control" name="sexe" id="sexe" value="<?php echo $listeU[0]['sexe'];?>" disabled>
                                     </div>
                                 </div>
+                                <div class="form-group">
+
+                                    <div class="col-xs-6">
+                                        <label for="role"><h4>Role</h4></label>
+                                        <input type="text" class="form-control" name="role" id="role" value="<?php echo $listeU[0]['role'];?>" disabled>
+                                    </div>
+                                </div>
                                 
 
                             </form>
@@ -537,9 +568,9 @@ header("Location:profil.php");
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Contact:</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"> <strong> Téléphone:</strong> +216 50 031 324<br></a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"><strong> Adresse:</strong> El Ghazela<br></a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#"><strong> Email:</strong> AnimShop@esprit.tn <br></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"> <strong> Téléphone:</strong> +216 70 250 000<br></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"><strong> Adresse:</strong> 1, 2 rue André Ampère - 2083 - Pôle Technologique - El Ghazala.<br></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#"><strong> Email:</strong> contact@esprit.tn <br></a></li>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

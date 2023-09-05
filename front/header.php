@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Anim shop </title>
+    <title>Esprit </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Law Firm Website Template" name="keywords">
     <meta content="Law Firm Website Template" name="description">
@@ -31,8 +31,8 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a href="index.html">
-                            <h1>Anim shop</h1>
+                        <a href="../index.html">
+                            <h1>Esprit</h1>
                             <!-- <img src="../img/logo.jpg" alt="Logo"> -->
                         </a>
                     </div>
@@ -44,14 +44,14 @@
                                 <p>de lundi a vendredi </p>
                             </div>
                             <div class="text">
-                                <h2>+216 456 7890</h2>
+                                <h2>+216 70 250 000</h2>
                                 <p>Appelez-nous pour plus d'infos</p>
                             </div>
                             <div class="social">
                                 <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/esprit.tn"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/school/esprit_2/"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.instagram.com/esprit_ingenieur/"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -71,10 +71,10 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto">
-                        <a href="afficherEvents.php" class="nav-item nav-link">Events</a>
-                        <a href="afficherOffre.php" class="nav-item nav-link">Offre</a>
-                        <a href="register.php" class="nav-item nav-link">Inscription</a>
-                        <a href="connexion.php" class="nav-item nav-link">Connexion</a>
+                    <a href="../cours/afficherQuiz.php" class="nav-item nav-link">Quiz</a>
+                    <a href="../cours/cours.php" class="nav-item nav-link">Cours</a>
+                        <a href="../register.php" class="nav-item nav-link">Inscription</a>
+                        <a href="../connexion.php" class="nav-item nav-link">Connexion</a>
 
 
 

@@ -1,5 +1,5 @@
 <?php
-include "../../controller/OffreC.php";
+include "../../controller/quizC.php";
 
 
 include"../header.php";
@@ -12,43 +12,42 @@ include"../header.php";
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Our Offre</h2>
+                <h2>Our Quiz</h2>
             </div>
             <div class="col-12">
-                <a href="">Home</a>
-                <a href="">Our Offres</a>
+                <a href="../index.html">Home</a>
+                <a href="">Our Quiz</a>
             </div>
         </div>
     </div>
 </div>
 <!-- Page Header End -->
 
-<!-- Blog Start -->
-<div class="blog">
+
+   <!-- Blog Start -->
+   <div class="blog">
     <div class="container">
-        <div class="section-header">
-            <h2>Latest From Offre</h2>
-        </div>
+       
 
         <div class="row blog-page">
 
             <?PHP
-            $EventC=new OffreC();
-            $listeUsers=$EventC->afficherPromos();
-            foreach($listeUsers as $user){
+            $quizC=new quizC();
+            $listequiz = $quizC->afficherquizs();
+            foreach($listequiz as $user){
 
                 ?>
                 <div class="col-lg-4 col-md-6 blog-item">
-                    <img src="../img/AZ-1.jpg" alt="Blog">
+                    <img src="../img/quiz.avif" alt="Blog">
 
                     <div class="meta">
                         <i class="fa fa-list-alt"></i>
-                        <a href="">ref : <?PHP echo $user['ref']; ?></a><br>
+                        <a href="">Titre : <?PHP echo $user['title']; ?></a><br>
                         <i class="fa fa-calendar-alt"></i>
-                        <p>date-debut : <?PHP echo $user['datedeb']; ?></p>
+                        <a href="">Nombre de questions : <?PHP echo $user['question_count']; ?></a><br>
+                        <i class="fa fa-calendar-alt"></i>
+                        <a href="">Durée : <?PHP echo $user['duration']; ?></a><br>
                         <br>
-                        <i class="fa fa-calendar-alt"></i>
-                        <p>date-fin : <?PHP echo $user['datefin']; ?></p>
                     </div>
 
 

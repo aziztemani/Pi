@@ -12,7 +12,7 @@ if (isset($_POST['reset_request_submit']) && (!empty($_POST["email"])))
       if($message2!='Désolé, votre Adresse est inexistante')
       {
         $header="MIME-Version: 1.0\r\n";
-        $header.='From:"AnimShop"<AnimShop@esprit.tn>'."\n";
+        $header.='From:"Esprit"<amenallah.benkhalifa@esprit.tn>'."\n";
         $header.='Content-Type:text/html; charset="uft-8"'."\n";
         $header.='Content-Transfer-Encoding: 8bit';
        

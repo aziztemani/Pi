@@ -1,31 +1,14 @@
 <?php
-include "../../controller/articleA.php";
-$articleA = new articleA();
-
-
-
-
-
-$titre = '';
-if (isset($_POST['titre'])) {
-
-    $titre = $_POST['titre'];
-    $listearticle = $articleA->AfficherarticleFiltre($titre);
-} else
-
-
-
-    $listearticle = $articleA->afficherArticles();
+include "../controller/coursC.php";
+$coursC = new coursC();
+$listecours = $coursC->affichercourss();
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
-
-                    
-
 <head>
     <meta charset="utf-8">
-    <title>Anim shop Animalerie </title>
+    <title>Esprit </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Anim shop" name="keywords">
     <meta content="Anim shop" name="description">
@@ -94,14 +77,12 @@ if (isset($_POST['titre'])) {
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
-                        <a href="../eventetoffre/afficherEvents.php" class="nav-item nav-link">Events</a>
-                        <a href="../eventetoffre/afficherOffre.php" class="nav-item nav-link">Offre</a>
+                            <div class="navbar-nav mr-auto">
+                        <a href="../cours/afficherCours.php" class="nav-item nav-link">Cours</a>
+                        <a href="../cours/afficherQuiz.php" class="nav-item nav-link">Quiz</a>
 <a href="article.php" class="nav-item nav-link">Blog</a>
 
 
-
-                    </div>
-                        
 
                     </div>
                 </nav>
@@ -124,22 +105,25 @@ if (isset($_POST['titre'])) {
                 </div>
             </div>
         </div>
-
-
-
+        <!-- Page Header End -->
 
 
         <!-- Blog Start -->
         <div class="blog">
             <div class="container">
                 <div class="section-header">
-                    <h2>Nos blogs</h2>
+                    <h2>liste des commentaires</h2>
                 </div>
 
 
 
             </div>
         </div>
+
+
+
+
+
 
 
 
@@ -150,25 +134,54 @@ if (isset($_POST['titre'])) {
 
 
 
-        <div class="col-xl-6 col-md-12 ">
-
-            <div class="col-xl-6 col-md-12">
-                <div class="ms-panel ms-panel-fh" style="width:900px ; margin-left: 120px;">
-                    <div class="ms-panel-body">
-
-
-                       
-
-
-
-                        <div class="form-row">
-                            <div class="col-xxl-7 col-md-12 ">
-                                <h5> </h5><br>
 
 
 
 
 
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-panel-fh" style="width:900px ; margin-left: 120px;">
+                <div class="ms-panel-body">
+
+
+                   
+
+
+
+
+                    <div class="form-row">
+                        <div class="col-xxl-7 col-md-12 ">
+
+
+
+                        <?PHP
+foreach($listecours as $row){
+  ?>
+  <tr>
+  <td><?PHP echo $row['Idcours']; ?></td>
+  <td><?PHP echo $row['title']; ?></td>
+  <td><?PHP echo $row['description']; ?></td>
+  <td><?PHP echo $row['date']; ?></td>
+  <td><form method="POST" action="supprimercours.php">
+  <input type="hidden" value="<?PHP echo $row['Idcours']; ?>" name="Idcours">
+<button type="submit" style="min-width: 10px" class="btn btn-primary "  >  <i class="fa fa-trash" > </i></button>
+   </form>
+  </td>
+ <td><form method="POST" action="impression.php">
+  <input type="hidden" value="<?PHP echo $row['Idcours']; ?>" name="Idcours">
+<button type="submit" style="min-width: 10px" class="btn btn-primary " style="width:130px" >  <i class="flaticon-excel" > </i></button>
+   </form>
+  </td>
+  <td><a href="modifiercours.php?Idcours=<?PHP echo $row['Idcours']; ?>">
+<button type="submit" style="min-width: 10px" class="btn btn-primary"  name="modifier"  ><i class="flaticon-pencil"> </i></button>
+</td>
+
+  </tr>
+  <?PHP
+}
+?>
+                            
+                            ?>
 
 
 
@@ -176,66 +189,15 @@ if (isset($_POST['titre'])) {
 
 
 
-                                <?PHP
-                                foreach ($listearticle as $row) {
-                                ?>
 
 
-                                    <h1><?PHP echo $row['titre']; ?></h1>
-
-                                    
-                                    <div class="col-lg-4 col-md-6 blog-item">
-                    <img src="../img/aa-1.jpg" alt="Blog">
-                    
-                                    <p><?PHP echo $row['Description']; ?></p>
-                                   
-
-
-
-                                   
-
-                                    <form method="GET" action="ajoutcommentaire.php" enctype="multipart/form-data">
-
-
-                                        <input type="text" name="commentaire" class="form-control" id="nom" placeholder="commenter..." required="">
-
-                                        <input type="hidden" value="<?php echo $row['id_article'] ?>"   name="id_article"  >
-
-
-
-                                        <button class="btn btn-dark " name="submit" type="submit" id="submit">Commenter</button>
-
-
-                            </div>
-                            </div>
                         </div>
-                        <br><br>
-                        </form>
-
-
-
-
-                    <?PHP
-                                }
-                    ?>
-
-
-                    <form method="POST" action="affichercommentaire.php">
-                        <br><br><br><br>
-
-                       
-                    </form>
-
-
-
 
                     </div>
-
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
     </div>
     </div>
     </div>
@@ -247,7 +209,8 @@ if (isset($_POST['titre'])) {
 
 
 
-    <!-- Page Header End -->
+
+
 
 
 
@@ -346,19 +309,10 @@ if (isset($_POST['titre'])) {
 
 
 
-
-    <!--            xttttttt          -->
-
     <!-- Footer End -->
 
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     </div>
-
-
-
-
-
-
 
 
     <!-- JavaScript Libraries -->
